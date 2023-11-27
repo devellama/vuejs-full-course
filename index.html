@@ -24,12 +24,12 @@
 
 <body class="p-3">
 <section id="exercise">
-    <h1 class="text-primary">Ваше имя</h1>
-    <h3 class="text-white">Возраст</h3>
-    <h3 class="text-white">Возраст через 5 лет</h3>
-    <h3 class="text-white">Любимое число между 0 и 1</h3>
-    <img alt="image" src="source url" />
-    <input type="text" placeholder="Ваше имя" />
+    <h1 class="text-primary">{{ name }}</h1>
+    <h3 class="text-white">{{ age }}</h3>
+    <h3 class="text-white">{{ calcAge() }}</h3>
+    <h3 class="text-white">{{ calcRnd() }}</h3>
+    <img alt="image" v-bind:src="imgUrl" />
+    <input type="text" placeholder="Ваше имя" v-bind:value="name" />
 </section>
 </body>
 
