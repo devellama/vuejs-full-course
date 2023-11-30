@@ -15,21 +15,22 @@
         margin: 0.5rem;
         padding: 0.5rem;
     }
-
-    img {
-        display: block;
+    button {
+      font-size: 32px !important;
+      margin: 0 1rem;
+      padding: 0.5rem 2rem !important;
     }
   </style>
 </head>
 
-<body class="p-3">
-<section id="exercise">
-    <h1 class="text-primary">{{ name }}</h1>
-    <h3 class="text-white">{{ age }}</h3>
-    <h3 class="text-white">{{ calcAge() }}</h3>
-    <h3 class="text-white">{{ calcRnd() }}</h3>
-    <img alt="image" v-bind:src="imgUrl" />
-    <input type="text" placeholder="Ваше имя" v-bind:value="name" />
+<body class="p-3 text-center">
+<section id="events">
+    <h1 class="text-primary">Vue Events</h1>
+    <div>
+      <button v-on:click="count++" class="btn btn-primary">+</button>
+      <button v-on:click="count--" class="btn btn-primary">-</button>
+    </div>
+    <h3 class="text-white">{{ count }}</h3>
 </section>
 </body>
 
