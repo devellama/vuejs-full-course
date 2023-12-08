@@ -9,9 +9,11 @@
   <script src="https://unpkg.com/vue@next" defer></script>
   <script src="app.js" defer></script>
   <style>
-    h3 {
+    h3, p {
         background-color: #28a745;
         border-radius: 0.25rem;
+        color: #ffffff;
+        font-size: 28px;
         margin: 0.5rem;
         padding: 0.5rem;
     }
@@ -31,6 +33,8 @@
       <button v-on:click="decrement(5)" class="btn btn-primary">-5</button>
     </div>
     <h3 class="text-white">{{ count }}</h3>
+    <input type="text" v-on:input="setName($event, 'Musk')"/>
+    <p>{{ name }}</p>
 </section>
 </body>
 
