@@ -40,9 +40,14 @@
       <button v-on:click="increment(5)" class="btn btn-primary">+5</button>
       <button v-on:click="decrement(5)" class="btn btn-primary">-5</button>
     </div>
-    <h3 class="text-white">{{ count }}</h3>
-    <input type="text" v-on:input="setName($event, 'Musk')"/>
-    <p>{{ name }}</p>
+    <p>{{ count }}</p>
+    <input type="text" v-on:input="setName($event, 'Musk')" 
+    v-on:keyup.enter="confirmInput" />
+    <p>{{ confirmedName }}</p>
+    <form v-on:submit.prevent="submitForm">
+      <input type="text" />
+      <button>Submit</button>
+    </form>
 </section>
 </body>
 
